@@ -1,4 +1,4 @@
-/Users/willesreis/Documents/workspace_fx/spring-boot-application-jsf/src/main/java/org/acme/springjsf/config/Initializer.java
-/Users/willesreis/Documents/workspace_fx/spring-boot-application-jsf/src/main/java/org/acme/springjsf/StarterSpringApplication.java
-/Users/willesreis/Documents/workspace_fx/spring-boot-application-jsf/src/main/java/org/acme/springjsf/controller/CustomerController.java
-/Users/willesreis/Documents/workspace_fx/spring-boot-application-jsf/src/main/java/org/acme/springjsf/model/Customer.java
+/home/willes/workspace-oxygen/spring-boot-jsf-primefaces/src/main/java/org/acme/springjsf/service/CustomerService.java
+/home/willes/workspace-oxygen/spring-boot-jsf-primefaces/src/main/java/org/acme/springjsf/StarterSpringApplication.java
+/home/willes/workspace-oxygen/spring-boot-jsf-primefaces/src/main/java/org/acme/springjsf/controller/CustomerMB.java
+/home/willes/workspace-oxygen/spring-boot-jsf-primefaces/src/main/java/org/acme/springjsf/model/Customer.java

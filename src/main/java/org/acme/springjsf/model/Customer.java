@@ -1,5 +1,8 @@
 package org.acme.springjsf.model;
 
+import javax.inject.Named;
+
+@Named
 public class Customer {
 
 	private String firstName;

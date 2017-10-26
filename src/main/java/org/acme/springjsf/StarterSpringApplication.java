@@ -8,7 +8,6 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
-import org.acme.springjsf.config.Initializer;
 
 @SpringBootApplication
 public class StarterSpringApplication extends SpringBootServletInitializer {
@@ -19,7 +18,7 @@ public class StarterSpringApplication extends SpringBootServletInitializer {
 
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
-		return builder.sources(StarterSpringApplication.class, Initializer.class);
+		return builder.sources(StarterSpringApplication.class);
 	}
 
 	@Bean

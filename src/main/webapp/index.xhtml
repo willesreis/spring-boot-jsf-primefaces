@@ -6,11 +6,11 @@
 	xmlns:p="http://primefaces.org/ui">
  
     <h:head>
-    	<title>Spring Boot JSF</title>
+    	<title>Spring Boot + JSF</title>
     </h:head>
     <h:body>
-        <h1>Spring MVC Web with Primefaces</h1>
-        <p:dataTable var="cust" value="#{customerController.customers}" emptyMessage="Nenhum cliente encontrado">
+        <h1>Spring Boot + JSF 2.2 + Primefaces 6</h1>
+        <p:dataTable var="cust" value="#{customerMB.customers}" emptyMessage="Nenhum cliente encontrado">
         	<p:column headerText="Id">
         		<h:outputText value="#{cust.customerId}"/>
         	</p:column>
