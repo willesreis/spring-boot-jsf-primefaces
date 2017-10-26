@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: spring-boot-application-jsf
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: willesreis
+Implementation-Vendor-Id: org.acme.springjsf
+Build-Jdk: 1.8.0_60
+Implementation-URL: http://projects.spring.io/spring-boot/spring-boot-
+ application-jsf/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
