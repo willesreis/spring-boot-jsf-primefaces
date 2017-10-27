@@ -3,6 +3,8 @@ package org.acme.springjsf.controller;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
+import javax.faces.application.FacesMessage;
+import javax.faces.context.FacesContext;
 import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -21,7 +23,13 @@ public class CustomerMB {
 
 	@PostConstruct
 	private void init() {
-		customers = service.createCustomer();
+		customers = service.allCustomers();
+	}
+	
+	public void create() {
+		service.createCustomer();
+		FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Customer saved!",  null));
+		customers = service.allCustomers();
 	}
 
 	public List<Customer> getCustomers() {

@@ -10,16 +10,24 @@
     </h:head>
     <h:body>
         <h1>Spring Boot + JSF 2.2 + Primefaces 6</h1>
-        <p:dataTable var="cust" value="#{customerMB.customers}" emptyMessage="Nenhum cliente encontrado">
-        	<p:column headerText="Id">
-        		<h:outputText value="#{cust.customerId}"/>
-        	</p:column>
-        	<p:column headerText="First Name">
-        		<h:outputText value="#{cust.firstName}"/>
-        	</p:column>
-        	<p:column headerText="Last Name">
-        		<h:outputText value="#{cust.lastName}"/>
-        	</p:column>
-        </p:dataTable>
+        <h:panelGroup id="table">
+	        <p:dataTable var="cust" value="#{customerMB.customers}" emptyMessage="Nenhum cliente encontrado">
+				<f:facet name="header">Customers</f:facet>
+	        	<p:column headerText="Id">
+	        		<h:outputText value="#{cust.customerId}"/>
+	        	</p:column>
+	        	<p:column headerText="First Name">
+	        		<h:outputText value="#{cust.firstName}"/>
+	        	</p:column>
+	        	<p:column headerText="Last Name">
+	        		<h:outputText value="#{cust.lastName}"/>
+	        	</p:column>
+	        </p:dataTable>
+        </h:panelGroup>
+        <br/>
+        <h:form>
+	        <p:growl id="growl" life="2000" />
+    	    <p:commandButton value="New Customer" update="growl table" actionListener="#{customerMB.create()}"></p:commandButton>
+        </h:form>
     </h:body>
 </f:view>

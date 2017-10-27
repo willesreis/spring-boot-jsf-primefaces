@@ -1,7 +1,7 @@
 package org.acme.springjsf.service;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -15,20 +15,15 @@ public class CustomerService {
 	@Inject
 	private CustomerRepository repository;
 	
-	private List<Customer> customers;
+	private AtomicInteger counter = new AtomicInteger();
 
-	public List<Customer> createCustomer() {
-//		customers = new ArrayList<Customer>();
-//		
-//		Customer c1 = new Customer("John", "Doe", 123456);
-//		customers.add(c1);
-//		Customer c2 = new Customer("Jane", "Doe", 234567);
-//		customers.add(c2);
-//		Customer c3 = new Customer("Adam", "Scotch", 345678);
-//		customers.add(c3);
-		
-		customers = repository.findAll();
-		
+	public void createCustomer() {
+		Customer customer = new Customer("John " + counter.get(), "Doe " + counter.getAndIncrement());
+		repository.save(customer);
+	}
+
+	public List<Customer> allCustomers() {
+		List<Customer> customers = repository.findAll();
 		return customers;
 	}
 }

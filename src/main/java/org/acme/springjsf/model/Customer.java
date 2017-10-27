@@ -5,30 +5,38 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "customer", schema = "sispof")
 public class Customer {
 
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
-	@SequenceGenerator(name = "seq_customer_gen", schema = "public", sequenceName = "seq_customer", allocationSize = 0)
-	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_customer_gen")
 	private Integer customerId;
+
 	@Column(name = "first_name")
 	private String firstName;
+
 	@Column(name = "last_name")
 	private String lastName;
 	
 	public Customer() {
 		super();
 	}
-
-	public Customer(String firstName, String lastName, Integer customerId) {
+	
+	public Customer(String firstName, String lastName) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
+	}
+
+	public Customer(Integer customerId, String firstName, String lastName) {
+		super();
 		this.customerId = customerId;
+		this.firstName = firstName;
+		this.lastName = lastName;
 	}
 
 	public String getFirstName() {
