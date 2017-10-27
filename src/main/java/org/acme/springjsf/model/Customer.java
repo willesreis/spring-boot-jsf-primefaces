@@ -1,13 +1,24 @@
 package org.acme.springjsf.model;
 
-import javax.inject.Named;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 
-@Named
+@Entity
 public class Customer {
 
-	private String firstName;
-	private String lastName;
+	@Id
+	@Column(name = "id")
+	@SequenceGenerator(name = "seq_customer_gen", schema = "public", sequenceName = "seq_customer", allocationSize = 0)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_customer_gen")
 	private Integer customerId;
+	@Column(name = "first_name")
+	private String firstName;
+	@Column(name = "last_name")
+	private String lastName;
 	
 	public Customer() {
 		super();
