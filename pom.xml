@@ -6,10 +6,9 @@
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>1.4.0.RELEASE</version>
 	</parent>
-	<groupId>org.acme.springjsf</groupId>
-	<artifactId>spring-boot-application-jsf</artifactId>
+	<groupId>org.acme.spring</groupId>
+	<artifactId>spring-boot-jsf-primefaces</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>spring-boot-application-jsf</name>
 	<packaging>war</packaging>
 	<description>Spring Boot application of example to package JSF 2.2 and Primefaces 6 using CDI minimal</description>
 	<dependencies>
